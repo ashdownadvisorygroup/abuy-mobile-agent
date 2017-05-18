@@ -1,0 +1,60 @@
+div.img_profile{
+  min-height: 100px;
+  min-width: 100px;
+  width: 100%;
+  padding: 5%;
+  margin-top: 20px;
+  img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+  }
+}
+div.agentId{
+  width: 100%;
+  text-align: center;
+}
+div.characteristics{
+  width: 100%;
+  div.container.row{
+    min-height: 40px;
+    margin: 5%;
+    width: 90% !important;
+    padding: 0;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+    div.col-20.col-center{
+      text-align: center;
+      i{
+        margin: auto;
+        font-size: 1.5em;
+      }
+    }
+    div.col-80.col-center{
+      text-align: left;
+    }
+  }
+}
+button.buttonEdit{
+  margin: 0 !important;
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+}
+div.editDiv{
+  div.paddingTopEdit{
+    height: 10px;
+  }
+  div.formTitle{
+    height: 18px;
+    font-size: 0.8em;
+  }
+  div.formValue{
+    margin: 5px 10px 5px 10px;
+    height: 35px;
+    input{
+      font-size: 1em;
+    }
+  }
+}

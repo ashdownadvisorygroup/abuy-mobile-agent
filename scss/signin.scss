@@ -1,0 +1,30 @@
+#logoContainer{
+  height: 150px;
+  width: 100%;
+}
+#loginIntermediate{
+  div.loginPasswordForgotten{
+    color: white;
+    width: 100%;
+    height: 50px;
+  }
+  div.loginSelectLanguage{
+    color: white;
+    width: 100%;
+    height: 50px;
+    #loginLanguages{
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 1px solid white;
+      border-radius: 5px;
+    }
+  }
+}
+button#loginSubmit{
+  border-radius: 2px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+input.inputConnection{
+  color: white;
+  font-size: 1.25em;
+}

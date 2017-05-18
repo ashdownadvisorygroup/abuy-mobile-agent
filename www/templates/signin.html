@@ -1,0 +1,48 @@
+<ion-view view-title="Signin">
+  <ion-content class="bkg_out">
+    <div id="logoContainer" class="row row-center">
+      <div class="autoMargin">
+        <img src="img/logo.png" alt="Logo">
+      </div>
+    </div>
+    <div class="list" style="padding: 0 20px 0 20px;">
+      <div class="item row" style="border: none; border-bottom: 1px solid white;">
+        <div class="row col-20 row-center">
+          <div class="autoMargin" style="margin-bottom: 5px;">
+            <i class="icon ion-person" style="font-size: 2em;"></i>
+          </div>
+        </div>
+        <label class="item-input item-floating-label col col-80">
+          <span class="input-label">Email</span>
+          <input ng-model="data.email" type="text" placeholder="Email" class="inputConnection">
+        </label>
+      </div>
+      <div class="item row" style="border: none; border-bottom: 1px solid white;">
+        <div class="row col-20 row-center">
+          <div class="autoMargin" style="margin-bottom: 5px;">
+            <i class="icon ion-ios-locked" style="font-size: 2em;"></i>
+          </div>
+        </div>
+        <label class="item-input item-floating-label col col-80">
+          <span class="input-label">Mot de passe</span>
+          <input ng-model="data.password" type="password" placeholder="Mot de passe" class="inputConnection">
+        </label>
+      </div>
+      <div class="item row" style="border: none; padding: 0; margin-top: 15px;">
+        <button class="button button-full" id="loginSubmit" ng-click="connect()">Connexion</button>
+      </div>
+    </div>
+    <div id="loginIntermediate">
+      <div class="loginPasswordForgotten row row-center">
+        <div class="autoMargin">
+          <a href="/" style="color: white;">Mot de passe oublié</a>
+        </div>
+      </div>
+      <div class="loginSelectLanguage row row-center">
+        <div id="loginLanguages" class="autoMargin" style="padding: 5px;">
+          <i class="icon ion-ios-world-outline" style="padding-right: 5px"></i>Français
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,30 @@
+<ion-view view-title="Retrait">
+  <ion-content class="bkg_in">
+    <div class="paddingTop"></div>
+    <div class="formTitle">Effectuer un retrait au numéro</div>
+    <div class="formValue">
+      <input type="number" ng-model="data.phone">
+    </div>
+    <div class="paddingTop"></div>
+    <div class="formTitle">Détenteur du compte</div>
+    <div class="formValue">
+      <input ion-autocomplete type="text" ng-model="data.provider" readonly="readonly" class="ion-autocomplete" item-view-value-key="name" autocomplete="off" max-selected-items="1" items-method="callbackMethod(query)">
+    </div>
+
+
+    <div class="paddingTop"></div>
+    <div class="formTitle">Montant</div>
+    <div class="row rechargeAmount">
+      <div class="formValue">
+        <input type="number" ng-model="data.amount">
+      </div>
+      <div class="rechargeUnit row">
+        <div class="autoMargin">
+          XAF
+        </div>
+      </div>
+    </div>
+
+    <button class="button button-full buttonBottom" ng-click="withdrawal()">Effectuer le retrait</button>
+  </ion-content>
+</ion-view>

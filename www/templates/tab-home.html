@@ -1,0 +1,54 @@
+<ion-view view-title="Home">
+  <ion-content class="bkg_in">
+    <div class="bar bar-header item-input-inset" style="background-color: transparent;">
+      <label class="item-input-wrapper" style="background-color: transparent; color: white; border: 1px solid white;">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="number" ng-model="search.phone" placeholder="Numéro" ng-change="reset()" style="background-color: transparent; color: white;">
+      </label>
+    </div>
+    <div class="card" ng-repeat="operation in operations | filter : search | orderBy: 'createdAt':true">
+      <div class="item item-divider top row">
+        <div class="col">{{operation.maker?"Recharge":"Retrait"}}</div>
+        <div class="col" style="text-align: right;">{{operation.phone}}</div>
+      </div>
+      <div class="item item-text-wrap row">
+        <div class="col-25">
+          <img src="img/generic-user.png" alt="user">
+        </div>
+        <div class="col-75">
+          <div class="amount row">
+            <div class="col-40 col-center">
+              Montant (FCFA)
+            </div>
+            <div class="col-60 col-center">
+              <b>{{operation.amount}}</b>
+            </div>
+          </div>
+          <div class="date row">
+            <div class="col-10"></div>
+            <div class="col">
+              <span>{{operation.createdAt | date : 'dd/MM/yyyy'}}</span>
+              <span>&nbsp;&nbsp;&nbsp;</span>
+              <span>{{operation.createdAt | date : 'HH:mm:ss'}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item item-divider row down">
+        <div class="col-50 col-center">
+          Status
+        </div>
+        <div ng-if="operation.state == 'done'" class="col-50 col-center check" style="text-align: right;">
+          <i class="icon ion-checkmark"></i>
+        </div>
+        <div ng-if="operation.state == 'canceled'" class="col-50 col-center check" style="text-align: right;">
+          <i class="icon ion-ios-close-empty" style="color: red; font-size: 1.5em;"></i>
+        </div>
+        <div ng-if="operation.state == 'pending'" class="col-50 col-center check" style="text-align: right;">
+          <i class="icon ion-more" style="color: white;"></i>
+        </div>
+      </div>
+    </div>
+    <button class="button button-full buttonBottom" ng-click="disconnect()">Déconnexion</button>
+  </ion-content>
+</ion-view>

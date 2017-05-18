@@ -1,0 +1,13 @@
+{
+  "name": "agent",
+  "app_id": "8728b145",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}

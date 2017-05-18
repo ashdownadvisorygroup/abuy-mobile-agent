@@ -1,0 +1,76 @@
+<ion-view view-title="Account">
+  <ion-content class="bkg_in">
+    <div class="img_profile row row-center">
+      <img src="img/generic-user.png" alt="Profile">
+    </div>
+    <div class="agentId">Agent ID : {{agent.id}}</div>
+    <div ng-if="!edit" class="characteristics">
+      <div class="container row">
+        <div class="col-20 col-center">
+          <i class="icon ion-person"></i>
+        </div>
+        <div class="col-80 col-center">
+          {{agent.username}}
+        </div>
+      </div>
+
+      <div class="container row">
+        <div class="col-20 col-center">
+          <i class="icon ion-email"></i>
+        </div>
+        <div class="col-80 col-center">
+          {{agent.email}}
+        </div>
+      </div>
+
+      <div class="container row">
+        <div class="col-20 col-center">
+          <i class="icon ion-android-phone-portrait"></i>
+        </div>
+        <div class="col-80 col-center">
+          {{agent.phone}}
+        </div>
+      </div>
+
+      <div class="container row">
+        <div class="col-20 col-center">
+          <i class="icon ion-locked"></i>
+        </div>
+        <div class="col-80 col-center">
+          ----------------
+        </div>
+      </div>
+      <button ng-click="edition()" class="button button-full buttonBottom">{{edit==true?"Enrégistrer":"Modifier le compte"}}</button>
+    </div>
+
+
+    <div ng-if="edit" class="editDiv">
+      <div class="paddingTopEdit"></div>
+      <div class="formTitle">Username</div>
+      <div class="formValue">
+        <input type="text" ng-model="agent.username">
+      </div>
+      <div class="paddingTopEdit"></div>
+      <div class="formTitle">Email</div>
+      <div class="formValue">
+        <input type="email" ng-model="agent.email">
+      </div>
+      <div class="paddingTopEdit"></div>
+      <div class="formTitle">Phone</div>
+      <div class="formValue">
+        <input type="email" ng-model="agent.phone">
+      </div>
+      <div class="paddingTopEdit"></div>
+      <div class="formTitle">Password</div>
+      <div class="formValue">
+        <input type="password" ng-model="agent.password">
+      </div>
+      <div class="paddingTopEdit"></div>
+      <div class="formTitle">Confirm password</div>
+      <div class="formValue">
+        <input type="password" ng-model="agent.confirm">
+      </div>
+      <button ng-click="edition()" class="button button-full buttonBottom">{{edit==true?"Enrégistrer":"Modifier le compte"}}</button>
+    </div>
+  </ion-content>
+</ion-view>
